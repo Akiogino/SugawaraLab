@@ -1,0 +1,102 @@
+% Template for e-labnote
+\documentclass[11pt,a4paper,xelatex,ja=standard]{bxjsarticle}
+\geometry{left = 25mm, top = 25mm}
+\renewcommand{\figurename}{Figure}
+\renewcommand{\tablename}{Table}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\author{}
+\date{}
+\usepackage{marginnote}
+\usepackage{titlesec}
+\titleformat{\section}[hang]{\large\filcenter\bfseries}{\thesection}{1zw}{}
+
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+
+\begin{document}
+\pagestyle{empty}
+\pagestyle{plain}
+\setcounter{page}{1}
+
+\section{2025-02-02のラボノート}\label{ux306eux30e9ux30dcux30ceux30fcux30c8}
+
+ラボノート作成日：2025-02-02
+
+\subsection{実施した内容}\label{ux5b9fux65bdux3057ux305fux5185ux5bb9}
+
+本日行ったことを第３者が読んでもわかるように書きます（何を，なぜ，どのように，必要なら時刻も書きます）。実際の実験だけでなく，考えたことやアイディア，調べてみたこと（論文のまとめとかも等）もどんどん書いていきます。
+
+\subsection{得られた結果}\label{ux5f97ux3089ux308cux305fux7d50ux679c}
+
+本日得られた結果・分かったこと（分からなかったこと）を書きます。以下のようにするとRの図が挿入できます。必要に応じて，追加しましょう。
+
+\includegraphics{2025-02-02_files/figure-latex/pressure-1.pdf}
+
+\subsection{結果についての解釈・議論・今後の予定}\label{ux7d50ux679cux306bux3064ux3044ux3066ux306eux89e3ux91c8ux8b70ux8ad6ux4ecaux5f8cux306eux4e88ux5b9a}
+
+結果や考えたこと・調べたことに関する自分の解釈や研究室のメンバーとの議論を書いて，次に何をする予定なのかを書きます。
+
+\end{document}
