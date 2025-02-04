@@ -35,12 +35,56 @@ date_write <- '2025-02-03'
 
 ## 実施した内容
 
-本日行ったことを第３者が読んでもわかるように書きます（何を，なぜ，どのように，必要なら時刻も書きます）。実際の実験だけでなく，考えたことやアイディア，調べてみたこと（論文のまとめとかも等）もどんどん書いていきます。
-
+まずは
+> psyinfr::researchIn()
+の関数を実行してみた。
+これから
+psyinfr::researchOut()
+を実行してみる
 
 ## 得られた結果
 
-本日得られた結果・分かったこと（分からなかったこと）を書きます。以下のようにするとRの図が挿入できます。必要に応じて，追加しましょう。
+> psyinfr::researchIn()
+を実行したら今日の日付の.Rmdファイルが作成された。
+
+とりあえずここに書いている。
+コミットとかはしなくていいのかなあ〜
+
+ダメだった
+リモートリポジトリのMainブランチが見当たらないとのこと
+system("git remote -v", intern = TRUE)
+をこれから実行して，そもそもリポジトリとの接続ができているのかを試す
+system("git branch -r", intern = TRUE)
+
+あとTeXがないからダメらしい
+Mac OSの場合，以下を実行してTexを入れることができる
+install.packages("tinytex")
+tinytex::install_tinytex()
+
+インストール後，念のためRを再起動し，下記コマンドでxelatexが使えるか確認します。
+
+system("xelatex --version", intern = TRUE)
+
+以下で
+
+system("git fetch origin")
+
+system("git branch -r")
+
+リモートリポジトリのブランチのリストを表示
+system("git branch -r", intern = TRUE)
+
+psyinfr::researchIn()
+psyinfr::set_rc()
+usethis::use_git_config(user.name = "Akiogino", user.email = "akiyama0725.1999@gmail.com")
+psyinfr::researchOut()
+
+
+system("git branch -r", intern = TRUE)# リモートリポジトリのブランチ名を確認
+
+system("git fetch", intern = TRUE)
+system("git branch -r", intern = TRUE)
+
 
 ```{r pressure, echo=FALSE}
 plot(pressure)
@@ -50,3 +94,44 @@ plot(pressure)
 ## 結果についての解釈・議論・今後の予定
 
 結果や考えたこと・調べたことに関する自分の解釈や研究室のメンバーとの議論を書いて，次に何をする予定なのかを書きます。
+
+> psyinfr::researchIn()
+を実行したら今日の日付の.Rmdファイルが作成された。
+
+とりあえずここに書いている。
+コミットとかはしなくていいのかなあ〜
+
+ダメだった
+リモートリポジトリのMainブランチが見当たらないとのこと
+system("git remote -v", intern = TRUE)
+をこれから実行して，そもそもリポジトリとの接続ができているのかを試す
+system("git branch -r", intern = TRUE)
+
+あとTeXがないからダメらしい
+Mac OSの場合，以下を実行してTexを入れることができる
+install.packages("tinytex")
+tinytex::install_tinytex()
+
+インストール後，念のためRを再起動し，下記コマンドでxelatexが使えるか確認します。
+
+system("xelatex --version", intern = TRUE)
+
+以下で
+
+system("git fetch origin")
+
+system("git branch -r")
+
+リモートリポジトリのブランチのリストを表示
+system("git branch -r", intern = TRUE)
+
+psyinfr::researchIn()
+psyinfr::set_rc()
+usethis::use_git_config(user.name = "Akiogino", user.email = "akiyama0725.1999@gmail.com")
+psyinfr::researchOut()
+
+
+system("git branch -r", intern = TRUE)# リモートリポジトリのブランチ名を確認
+
+system("git fetch", intern = TRUE)
+system("git branch -r", intern = TRUE)
